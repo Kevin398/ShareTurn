@@ -7,7 +7,7 @@ A **small, working prototype** of a remote-controlled Lazy Susan for sharing foo
 1. A diner moves a joystick.
 2. A plate rotates clockwise or counter-clockwise
 3. Moving farther from the middle raises the motor speed gradually, up to a conservative maximum.
-4. Diners use the knob to turn the food item they want towards them.
+4. Diners use the joystick to turn the food item they want towards them.
 
 **Out of MVP scope:** clapping, LEDs, ultrasonic tracking, automatic selection of a named food, LCD, web app, and full-size loaded serving tray. There is **no sensor for the plate's absolute angle**, so the prototype cannot know whether a particular food drawing is aligned with a person.
 
@@ -34,7 +34,7 @@ bash scripts/test.sh
 bash scripts/simulate.sh
 ```
 
-The simulator accepts raw simulated knob readings, 0–1023. Start by entering `512` to enable the controller, then try `800`, `1023`, `200`, `0`, `512`.
+The simulator accepts raw simulated joystick readings, 0–1023. Start by entering `512` to enable the controller, then try `800`, `1023`, `200`, `0`, `512`.
 
 **Only** `firmware/shareturn/shareturn.ino` needs an UNO. Desktop tests use the exact same pure C++ controller code used by the sketch. GitHub Actions runs those tests for every push or pull request.
 
