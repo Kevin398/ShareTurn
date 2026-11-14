@@ -1,0 +1,14 @@
+name: Host controller tests
+on:
+  push:
+  pull_request:
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test portable controller logic
+        run: bash scripts/test.sh
+      - name: Smoke test simulator
+        run: |
+          printf '512\n1023\n0\n512\nq\n' | bash scripts/simulate.sh | grep 'direction=0 rpm=0'
