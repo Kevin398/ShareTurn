@@ -2,16 +2,29 @@
 
 A **small, working prototype** of a remote-controlled Lazy Susan for sharing food around a table. The prototype uses a lightweight rotating paper/cardboard disc divided into four illustrated food sections. No real food or dishes are carried.
 
-## What we are building (locked MVP)
+## What our prototype does
 
 1. A diner moves a joystick.
 2. A plate rotates clockwise or counter-clockwise
 3. Moving farther from the middle raises the motor speed gradually, up to a conservative maximum.
 4. Diners use the joystick to turn the food item they want towards them.
 
-**Out of MVP scope:** clapping, LEDs, ultrasonic tracking, automatic selection of a named food, LCD, web app, and full-size loaded serving tray. There is **no sensor for the plate's absolute angle**, so the prototype cannot know whether a particular food drawing is aligned with a person.
+**Not implemented in this prototype:** clapping, LEDs, ultrasonic tracking, automatic selection of a named food, LCD, web app, and full-size loaded serving tray. There is **no sensor for the plate's absolute angle**, so the prototype cannot know whether a particular food drawing is aligned with a person.
 
 This is a **continuous manual rotation control**, not a digital four-item selector. Users visually stop the tray at the desired place.
+
+## Final project documentation and demo
+
+- [Watch my ShareTurn prototype video](media/shareturn-demo.mp4)
+- [Group design-process report (PDF)](docs/ShareTurn-Design-Process.pdf)
+- [Implementation and wiring documentation (PDF)](docs/ShareTurn-Implementation-Documentation.pdf)
+- [Our project sketches (PDF)](docs/ShareTurn-Sketches.pdf)
+
+![ShareTurn assembled Arduino, joystick, and illustrated serving plate](media/shareturn-prototype-1.jpg)
+
+The final prototype rotates a lightweight illustrated plate with joystick control. We tested the circuit and motor on the bench, and the controller tests passed. We did **not** run a formal user study, so we cannot claim the design is easier to use than a normal Lazy Susan. The kit motor is not intended to turn a loaded serving tray.
+
+The final report documents our work and credits: Ayushi and I contributed concepts and sketches; I assembled and tested the physical circuit and recorded photos and video; Prince worked on firmware, the simulator, automated tests, and GitHub Actions; Ayushi prepared diagrams and the final design-process report. Our report also documents the team's ChatGPT and Claude assistance.
 
 ## Parts
 
